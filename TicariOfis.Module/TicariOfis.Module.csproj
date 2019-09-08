@@ -161,12 +161,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjects\Adresler.cs" />
-    <Compile Include="BusinessObjects\AdresTurleri.cs" />
-    <Compile Include="BusinessObjects\Kisiler.cs" />
-    <Compile Include="BusinessObjects\Musteriler.cs" />
-    <Compile Include="BusinessObjects\Sehirler.cs" />
-    <Compile Include="BusinessObjects\Ulkeler.cs" />
+    <Compile Include="BusinessObjects\Birimler.cs" />
+    <Compile Include="BusinessObjects\Dovizler.cs" />
+    <Compile Include="BusinessObjects\Stoklar.cs" />
+    <Compile Include="BusinessObjects\Kategoriler.cs" />
+    <Compile Include="BusinessObjects\VergiOranlari.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
@@ -207,6 +206,7 @@
   <ItemGroup>
     <Content Include="Welcome.html" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

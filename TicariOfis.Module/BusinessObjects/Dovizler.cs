@@ -15,13 +15,14 @@ using DevExpress.Persistent.Validation;
 namespace TicariOfis.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [DefaultProperty(nameof(Tanim))]
+    //[ImageName("BO_Contact")]
+    [DefaultProperty("Adi")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class Sehirler : XPObject
+    public class Dovizler : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        public Sehirler(Session session)
+        public Dovizler(Session session)
             : base(session)
         {
         }
@@ -31,29 +32,13 @@ namespace TicariOfis.Module.BusinessObjects
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
 
-        int _TrafikKod;
-        string _Tanim;
-        Ulkeler _UlkeID;
-        [XafDisplayName("Ülke"), Index(0)]
-        public Ulkeler UlkeID
-        {
-            get => _UlkeID;
-            set => SetPropertyValue(nameof(UlkeID), ref _UlkeID, value);
-        }
+        string _Adi;
 
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
-        [XafDisplayName("Şehir"), Index(1)]
-        public string Tanim
+        public string Adi
         {
-            get => _Tanim;
-            set => SetPropertyValue(nameof(Tanim), ref _Tanim, value);
-        }
-
-        [XafDisplayName("Trafik Kodu"), Index(2)]
-        public int TrafikKod
-        {
-            get => _TrafikKod;
-            set => SetPropertyValue(nameof(TrafikKod), ref _TrafikKod, value);
+            get => _Adi;
+            set => SetPropertyValue(nameof(Adi), ref _Adi, value);
         }
         //private string _PersistentProperty;
         //[XafDisplayName("My display name"), ToolTip("My hint message")]
